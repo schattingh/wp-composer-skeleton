@@ -1,0 +1,8 @@
+.DS_Store
+*.sql
+/local-config.php
+/vendor/**
+/wp/**
+/content/plugins/**
+/content/mu-plugins/**
+/content/uploads/**
