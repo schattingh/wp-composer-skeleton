@@ -1,7 +1,5 @@
 <?php
 
-//  -----  ansible managed -----
-
 //  database connection
 if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
   include( dirname( __FILE__ ) . '/local-config.php' );
@@ -14,8 +12,6 @@ if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
 
 define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
-
-// $table_prefix  = 'wp_';
 
 //  disable debug by default
 define('WP_DEBUG', false);

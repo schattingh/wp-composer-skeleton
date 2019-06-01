@@ -6,10 +6,11 @@
     }
   ],
       "require": {
-        "johnpbloch/wordpress-core-installer": "^1.0",
-        "johnpbloch/wordpress-core": "5.2.1",
+        "roots/wordpress-core-installer": "^1.0",
+        "roots/wordpress": "5.2.1",
         "wpackagist-plugin/wordpress-seo": "11.3",
 	      "wpackagist-plugin/redis-cache":"1.4.3",
+        "wpackagist-plugin/amazon-s3-and-cloudfront":"2.1.1",
         "wpackagist-theme/twentynineteen": "1.4"
     },
       "extra": {
