@@ -1,11 +1,25 @@
-FROM alpine:latest
+FROM php:fpm-buster
 
-RUN apk add --no-cache wget php7 php7-json php7-phar php7-mbstring php7-openssl php7-fpm
+RUN apt-get update -y
+RUN apt-get install \
+  git \
+  unzip \
+  wget \
+  zip \
+  --no-install-recommends -y
 
-RUN wget https://getcomposer.org/installer -O /tmp/composer-setup.php
-RUN php /tmp/composer-setup.php
-RUN cp composer.phar /usr/local/bin/composer
+RUN wget --no-verbose --tries=5 --timeout=5 \
+  https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar \
+  -O /tmp/wp-cli.phar && \
+  chmod +x /tmp/wp-cli.phar && \
+  mv /tmp/wp-cli.phar /usr/local/bin/wp
+
+RUN wget --no-verbose --tries=5 --timeout=5 \
+  https://getcomposer.org/installer \
+  -O /tmp/installer && \
+  php /tmp/installer --install-dir=/tmp && \
+  mv /tmp/composer.phar /usr/local/bin/composer
 
 WORKDIR /app
 
-CMD [ "/bin/ash" ]
+ENTRYPOINT ["/bin/bash"]

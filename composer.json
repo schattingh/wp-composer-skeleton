@@ -7,11 +7,11 @@
   ],
       "require": {
         "roots/wordpress-core-installer": "^1.0",
-        "roots/wordpress": "5.2.1",
-        "wpackagist-plugin/wordpress-seo": "11.3",
-	      "wpackagist-plugin/redis-cache":"1.4.3",
-        "wpackagist-plugin/amazon-s3-and-cloudfront":"2.1.1",
-        "wpackagist-theme/twentynineteen": "1.4"
+        "roots/wordpress": "5.4.2",
+        "wpackagist-plugin/wordpress-seo": "14.5",
+	      "wpackagist-plugin/redis-cache":"2.0.4",
+        "wpackagist-plugin/amazon-s3-and-cloudfront":"2.4",
+        "wpackagist-theme/twentytwenty":"1.4"
     },
       "extra": {
         "wordpress-install-dir": "wp",
